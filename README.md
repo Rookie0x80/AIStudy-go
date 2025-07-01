@@ -38,7 +38,7 @@ go run .
 | Directory | Topic | Status | Content Overview |
 |-----------|-------|--------|------------------|
 | `01_concurrency/` | Concurrency Programming | ✅ Completed | Goroutines, Channels, Select, Context, Sync package, Atomic operations, Actor model, CSP pattern, Future/Promise, Reactive programming |
-| `02_interfaces/` | Interfaces & Polymorphism | 🚧 Planned | Interface definition, implicit implementation, type assertion, interface composition |
+| `02_interfaces/` | Interfaces & Polymorphism | ✅ Completed | Interface definition, implicit implementation, type assertion, interface composition, empty interfaces, polymorphism patterns |
 | `03_reflection/` | Reflection | 🚧 Planned | Type reflection, value reflection, dynamic calls, struct tags |
 | `04_generics/` | Generics | 🚧 Planned | Type parameters, constraints, type inference, generic methods |
 | `05_error_handling/` | Error Handling | 🚧 Planned | Error interface, error wrapping, error checking, custom errors |
@@ -60,13 +60,13 @@ go run .
 - **Future/Promise pattern**: Asynchronous result handling
 - **Reactive programming**: Reactive programming paradigm
 
-### 2. Interfaces & Polymorphism 🚧
+### 2. [Interfaces & Polymorphism](./02_interfaces/README.md) ✅
 - **Interfaces**: Implicit implementation defining behavior contracts
 - **Empty interfaces**: `interface{}` or `any` accepting any type
 - **Interface composition**: Combining multiple interfaces through embedding
-- **Type assertions**: Runtime type checking
+- **Type assertions**: Runtime type checking and safe conversion
 - **Interface type conversion**: Type-safe interface conversion
-- **Interface zero values**: Zero value behavior of interfaces
+- **Polymorphism patterns**: Real-world polymorphic design patterns
 
 ### 3. Reflection 🚧
 - **reflect package**: Runtime type information and value operations
@@ -284,7 +284,8 @@ go run .
   - [View Concurrency Programming Examples](./01_concurrency/README.md)
 
 ### Phase 2: Language Features 🚧
-- **Interfaces & Polymorphism**: Understanding Go's interface system and polymorphism
+- **Interfaces & Polymorphism**: Understanding Go's interface system and polymorphism ✅
+  - [View Interfaces & Polymorphism Examples](./02_interfaces/README.md)
 - **Reflection**: Runtime type information and dynamic operations
 - **Generics**: Go 1.18+ new features for type-safe generic programming
 
@@ -325,11 +326,12 @@ go run .
 - **Atomic operations**: Lock-free programming for high-performance concurrent operations
 - **Concurrency patterns**: Actor model, CSP pattern, Future/Promise, Reactive programming
 
-### Interfaces & Polymorphism (Planned)
+### Interfaces & Polymorphism (Completed)
 - **Interfaces**: Implicit implementation defining behavior contracts
 - **Empty interfaces**: `interface{}` or `any` accepting any type
-- **Type assertions**: Runtime type checking and conversion
+- **Type assertions**: Runtime type checking and safe conversion
 - **Interface composition**: Combining multiple interfaces through embedding
+- **Polymorphism patterns**: Real-world polymorphic design and decoupling strategies
 
 ### Reflection (Planned)
 - **Type reflection**: Obtaining type information and structure
@@ -366,6 +368,13 @@ go run .          # View all examples
 go run . 1        # Run basic Goroutines examples
 go run . 5        # Run Sync package examples
 go run . 10       # Run Reactive programming examples
+
+# Learn interfaces & polymorphism (completed)
+cd 02_interfaces
+go run .          # View all examples
+go run . 1        # Run basic interface examples
+go run . 3        # Run type assertion examples
+go run . 5        # Run empty interface examples
 ```
 
 ### Learning Suggestions
@@ -379,6 +388,7 @@ go run . 10       # Run Reactive programming examples
 
 ### Completed Chapters
 - ✅ **Concurrency Programming**: 10 complete example files covering all concurrency concepts from basic to advanced
+- ✅ **Interfaces & Polymorphism**: 5 complete example files covering interface patterns, type assertions, and polymorphic design
 - ✅ **Detailed Comments**: Each example has complete code comments and explanations
 - ✅ **Error Examples**: Including common pitfalls and avoidance methods
 - ✅ **Practical Applications**: Comprehensive cases showing typical scenarios in actual development
@@ -391,8 +401,9 @@ go run . 10       # Run Reactive programming examples
 
 ## ⚠️ Important Notes
 
-- Current project mainly completes the concurrency programming chapter, other chapters are under development
+- Current project has completed concurrency programming and interfaces & polymorphism chapters, other chapters are under development
 - Recommended to deeply study concurrency programming first, this is Go language's core advantage
+- Interfaces & polymorphism are important features of Go, helping understand Go's type system
 - Time delays in examples are only for demonstration purposes
 - Error examples deliberately show problems, should be avoided in actual development
 
@@ -466,7 +477,7 @@ go run .
 | 目录 | 主题 | 状态 | 内容概览 |
 |------|------|------|----------|
 | `01_concurrency/` | 并发编程 | ✅ 已完成 | Goroutines、Channels、Select、Context、Sync包、原子操作、Actor模型、CSP模式、Future/Promise、Reactive编程 |
-| `02_interfaces/` | 接口与多态 | 🚧 计划中 | 接口定义、隐式实现、类型断言、接口组合 |
+| `02_interfaces/` | 接口与多态 | ✅ 已完成 | 接口定义、隐式实现、类型断言、接口组合、空接口、多态模式 |
 | `03_reflection/` | 反射 | 🚧 计划中 | 类型反射、值反射、动态调用、结构体标签 |
 | `04_generics/` | 泛型 | 🚧 计划中 | 类型参数、约束、类型推断、泛型方法 |
 | `05_error_handling/` | 错误处理 | 🚧 计划中 | 错误接口、错误包装、错误检查、自定义错误 |
@@ -488,13 +499,13 @@ go run .
 - **Future/Promise模式**: 异步结果处理
 - **Reactive编程**: 响应式编程
 
-### 2. 接口与多态 🚧
+### 2. [接口与多态](./02_interfaces/README.md) ✅
 - **接口**: 隐式实现，定义行为契约
 - **空接口**: `interface{}` 或 `any`，可接受任意类型
 - **接口组合**: 通过嵌入组合多个接口
-- **类型断言**: 运行时类型检查
+- **类型断言**: 运行时类型检查和安全转换
 - **接口类型转换**: 类型安全的接口转换
-- **接口零值**: 接口的零值行为
+- **多态模式**: 真实世界的多态设计模式
 
 ### 3. 反射 🚧
 - **reflect包**: 运行时类型信息和值操作
@@ -712,7 +723,8 @@ go run .
   - [查看并发编程示例](./01_concurrency/README.md)
 
 ### 第二阶段：语言特性 🚧
-- **接口与多态**: 理解Go的接口系统和多态性
+- **接口与多态**: 理解Go的接口系统和多态性 ✅
+  - [查看接口与多态示例](./02_interfaces/README.md)
 - **反射**: 运行时类型信息和动态操作
 - **泛型**: Go 1.18+的新特性，类型安全的通用编程
 
@@ -753,11 +765,12 @@ go run .
 - **原子操作**: 无锁编程，高性能并发操作
 - **并发模式**: Actor模型、CSP模式、Future/Promise、Reactive编程
 
-### 接口与多态 (计划中)
+### 接口与多态 (已完成)
 - **接口**: 隐式实现，定义行为契约
 - **空接口**: `interface{}`或`any`，接受任意类型
-- **类型断言**: 运行时类型检查和转换
+- **类型断言**: 运行时类型检查和安全转换
 - **接口组合**: 通过嵌入组合多个接口
+- **多态模式**: 真实世界的多态设计和解耦策略
 
 ### 反射 (计划中)
 - **类型反射**: 获取类型信息和结构
@@ -794,6 +807,13 @@ go run .          # 查看所有示例
 go run . 1        # 运行Goroutines基础示例
 go run . 5        # 运行Sync包示例
 go run . 10       # 运行Reactive编程示例
+
+# 学习接口与多态（已完成）
+cd 02_interfaces
+go run .          # 查看所有示例
+go run . 1        # 运行基础接口示例
+go run . 3        # 运行类型断言示例
+go run . 5        # 运行空接口示例
 ```
 
 ### 学习建议
@@ -807,6 +827,7 @@ go run . 10       # 运行Reactive编程示例
 
 ### 已完成章节
 - ✅ **并发编程**: 10个完整的示例文件，涵盖从基础到高级的所有并发概念
+- ✅ **接口与多态**: 5个完整的示例文件，涵盖接口模式、类型断言和多态设计
 - ✅ **详细注释**: 每个示例都有完整的代码注释和说明
 - ✅ **错误示例**: 包含常见陷阱和避免方法
 - ✅ **实际应用**: 综合案例展示实际开发中的典型场景
@@ -819,8 +840,9 @@ go run . 10       # 运行Reactive编程示例
 
 ## ⚠️ 注意事项
 
-- 当前项目主要完成并发编程章节，其他章节正在开发中
+- 当前项目已完成并发编程和接口与多态章节，其他章节正在开发中
 - 建议先深入学习并发编程，这是Go语言的核心优势
+- 接口与多态是Go语言的重要特性，有助于理解Go的类型系统
 - 示例中的时间延迟仅用于演示效果
 - 错误示例故意展示问题，实际开发中应避免
 
