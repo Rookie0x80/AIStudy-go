@@ -22,8 +22,8 @@ This project is designed for:
 
 ```bash
 # Clone the project
-git clone <repository-url>
-cd go-learning
+git clone https://github.com/Rookie0x80/AIStudy-go.git
+cd AIStudy-go
 
 # View project structure
 ls -la
@@ -40,7 +40,7 @@ go run .
 | `01_concurrency/` | Concurrency Programming | ✅ Completed | Goroutines, Channels, Select, Context, Sync package, Atomic operations, Actor model, CSP pattern, Future/Promise, Reactive programming |
 | `02_interfaces/` | Interfaces & Polymorphism | ✅ Completed | Interface definition, implicit implementation, type assertion, interface composition, empty interfaces, polymorphism patterns |
 | `03_reflection/` | Reflection | ✅ Completed | Type reflection, value reflection, dynamic calls, struct tags, error handling patterns, reflection design patterns |
-| `04_generics/` | Generics | 🚧 Planned | Type parameters, constraints, type inference, generic methods |
+| `04_generics/` | Generics | ✅ Completed | Type parameters, constraints, type inference, generic types, algorithms, design patterns, best practices |
 | `05_error_handling/` | Error Handling | 🚧 Planned | Error interface, error wrapping, error checking, custom errors |
 | `06_memory_management/` | Memory Management | 🚧 Planned | GC, memory pools, escape analysis, performance optimization |
 | `07_package_management/` | Package Management | 🚧 Planned | Go Modules, workspaces, private repositories, version control |
@@ -80,13 +80,15 @@ go run .
 - **Design patterns**: Object mapping, dependency injection, serialization frameworks
 - **Advanced topics**: Performance optimization, security considerations, debugging techniques
 
-### 4. Generics (Go 1.18+) 🚧
+### 4. [Generics (Go 1.18+)](./04_generics/README.md) ✅
 - **Type parameters**: Generic implementations for functions and types
-- **Constraints**: Limiting type parameter capabilities
+- **Constraints**: Built-in and custom constraints, type sets
 - **Type inference**: Automatic type parameter deduction
-- **Type sets**: Type collections in constraints
-- **Generic methods**: Generic methods on structs
-- **Generic interfaces**: Type parameters in interfaces
+- **Generic types**: Generic structs, interfaces, and methods
+- **Generic containers**: Stack, queue, map, tree implementations
+- **Generic algorithms**: Sort, search, transformation, aggregation
+- **Design patterns**: Factory, builder, observer, strategy with generics
+- **Best practices**: Performance optimization, testing, error handling
 
 ### 5. Error Handling 🚧
 - **Error interface**: Standard error types
@@ -292,7 +294,8 @@ go run .
   - [View Interfaces & Polymorphism Examples](./02_interfaces/README.md)
 - **Reflection**: Runtime type information and dynamic operations ✅
   - [View Reflection Examples](./03_reflection/README.md)
-- **Generics**: Go 1.18+ new features for type-safe generic programming
+- **Generics**: Go 1.18+ new features for type-safe generic programming ✅
+  - [View Generics Programming Examples](./04_generics/README.md)
 
 ### Phase 3: Engineering Practice 🚧
 - **Error Handling**: Elegant error handling strategies
@@ -348,10 +351,14 @@ go run .
 - **Design patterns**: Object mapping, dependency injection, serialization frameworks, and configuration binding
 - **Advanced techniques**: Performance optimization, caching strategies, security considerations, and debugging
 
-### Generics (Planned)
-- **Type parameters**: Generic implementations for functions and types
-- **Constraints**: Limiting type parameter capabilities
-- **Type inference**: Automatic type parameter deduction
+### Generics (Completed)
+- **Type parameters**: Generic implementations for functions and types with multiple type parameters
+- **Constraints**: Built-in constraints (any/comparable) and custom constraints, type sets and union types
+- **Type inference**: Automatic type parameter deduction and type-inference friendly API design
+- **Generic types**: Generic structs, interfaces, methods, and thread-safe generic containers
+- **Generic algorithms**: Sorting, searching, transformation, aggregation, and functional programming patterns
+- **Design patterns**: Generic implementations of factory, builder, decorator, observer, strategy patterns
+- **Best practices**: Performance optimization, memory management, error handling, testing strategies, and common pitfall avoidance
 
 ### Error Handling (Planned)
 - **Error interface**: Standard error types and error handling
@@ -392,6 +399,13 @@ go run .          # View all examples
 go run . 1        # Run type system reflection
 go run . 6        # Run error handling & common mistakes (important!)
 go run . 7        # Run reflection design patterns
+
+# Learn generics programming (completed)
+cd 04_generics
+go run .          # View all examples
+go run . 1        # Run basic generics examples
+go run . 6        # Run generic algorithms examples
+go run . 8        # Run best practices examples
 ```
 
 ### Learning Suggestions
@@ -407,6 +421,7 @@ go run . 7        # Run reflection design patterns
 - ✅ **Concurrency Programming**: 10 complete example files covering all concurrency concepts from basic to advanced
 - ✅ **Interfaces & Polymorphism**: 5 complete example files covering interface patterns, type assertions, and polymorphic design
 - ✅ **Reflection**: 8 complete example files covering type reflection, value operations, function/method reflection, interface reflection, error handling, design patterns, and advanced techniques
+- ✅ **Generics Programming**: 8 complete example files covering basic generics, constraint systems, generic types, advanced constraints, generic containers, generic algorithms, design patterns, and best practices
 - ✅ **Detailed Comments**: Each example has complete code comments and explanations
 - ✅ **Error Examples**: Including common pitfalls and avoidance methods
 - ✅ **Practical Applications**: Comprehensive cases showing typical scenarios in actual development
@@ -419,10 +434,11 @@ go run . 7        # Run reflection design patterns
 
 ## ⚠️ Important Notes
 
-- Current project has completed concurrency programming, interfaces & polymorphism, and reflection chapters, other chapters are under development
+- Current project has completed concurrency programming, interfaces & polymorphism, reflection, and generics programming chapters, other chapters are under development
 - Recommended to deeply study concurrency programming first, this is Go language's core advantage
 - Interfaces & polymorphism are important features of Go, helping understand Go's type system
 - Reflection provides powerful dynamic programming capabilities, but should be used carefully with attention to error handling
+- Generics are a Go 1.18+ feature providing type-safe generic programming capabilities, pay attention to performance characteristics and best practices
 - Time delays in examples are only for demonstration purposes
 - Error examples deliberately show problems, should be avoided in actual development
 
@@ -480,8 +496,8 @@ Welcome to submit Issues and Pull Requests to improve this learning project!
 
 ```bash
 # 克隆项目
-git clone <repository-url>
-cd go-learning
+git clone https://github.com/Rookie0x80/AIStudy-go.git
+cd AIStudy-go
 
 # 查看项目结构
 ls -la
@@ -498,7 +514,7 @@ go run .
 | `01_concurrency/` | 并发编程 | ✅ 已完成 | Goroutines、Channels、Select、Context、Sync包、原子操作、Actor模型、CSP模式、Future/Promise、Reactive编程 |
 | `02_interfaces/` | 接口与多态 | ✅ 已完成 | 接口定义、隐式实现、类型断言、接口组合、空接口、多态模式 |
 | `03_reflection/` | 反射 | ✅ 已完成 | 类型反射、值反射、动态调用、结构体标签、错误处理模式、反射设计模式 |
-| `04_generics/` | 泛型 | 🚧 计划中 | 类型参数、约束、类型推断、泛型方法 |
+| `04_generics/` | 泛型 | ✅ 已完成 | 类型参数、约束、类型推断、泛型类型、算法、设计模式、最佳实践 |
 | `05_error_handling/` | 错误处理 | 🚧 计划中 | 错误接口、错误包装、错误检查、自定义错误 |
 | `06_memory_management/` | 内存管理 | 🚧 计划中 | GC、内存池、逃逸分析、性能优化 |
 | `07_package_management/` | 包管理 | 🚧 计划中 | Go Modules、工作区、私有仓库、版本控制 |
@@ -538,13 +554,15 @@ go run .
 - **设计模式**: 对象映射、依赖注入、序列化框架
 - **高级主题**: 性能优化、安全考虑、调试技巧
 
-### 4. 泛型 (Go 1.18+) 🚧
+### 4. [泛型 (Go 1.18+)](./04_generics/README.md) ✅
 - **类型参数**: 函数和类型的通用实现
-- **约束**: 限制类型参数的能力
+- **约束**: 内置和自定义约束、类型集合
 - **类型推断**: 自动推导类型参数
-- **类型集**: 约束的类型集合
-- **泛型方法**: 结构体上的泛型方法
-- **泛型接口**: 接口中的类型参数
+- **泛型类型**: 泛型结构体、接口和方法
+- **泛型容器**: 栈、队列、映射、树等数据结构实现
+- **泛型算法**: 排序、搜索、变换、聚合操作
+- **设计模式**: 工厂模式、建造者模式、观察者模式、策略模式的泛型实现
+- **最佳实践**: 性能优化、测试方法、错误处理
 
 ### 5. 错误处理 🚧
 - **错误接口**: 标准错误类型
@@ -750,7 +768,8 @@ go run .
   - [查看接口与多态示例](./02_interfaces/README.md)
 - **反射**: 运行时类型信息和动态操作 ✅
   - [查看反射示例](./03_reflection/README.md)
-- **泛型**: Go 1.18+的新特性，类型安全的通用编程
+- **泛型**: Go 1.18+的新特性，类型安全的通用编程 ✅
+  - [查看泛型编程示例](./04_generics/README.md)
 
 ### 第三阶段：工程实践 🚧
 - **错误处理**: 优雅的错误处理策略
@@ -806,10 +825,14 @@ go run .
 - **设计模式**: 对象映射、依赖注入、序列化框架和配置绑定
 - **高级技巧**: 性能优化、缓存策略、安全考虑和调试技巧
 
-### 泛型 (计划中)
-- **类型参数**: 函数和类型的通用实现
-- **约束**: 限制类型参数的能力
-- **类型推断**: 自动推导类型参数
+### 泛型 (已完成)
+- **类型参数**: 函数和类型的通用实现，支持多类型参数
+- **约束**: 内置约束(any/comparable)和自定义约束，类型集合和联合类型
+- **类型推断**: 自动推导类型参数，设计类型推断友好的API
+- **泛型类型**: 泛型结构体、接口、方法，线程安全的泛型容器
+- **泛型算法**: 排序、搜索、变换、聚合，函数式编程模式
+- **设计模式**: 工厂、建造者、装饰器、观察者、策略等模式的泛型实现
+- **最佳实践**: 性能优化、内存管理、错误处理、测试策略和常见陷阱避免
 
 ### 错误处理 (计划中)
 - **错误接口**: 标准错误类型和错误处理
@@ -850,6 +873,13 @@ go run .          # 查看所有示例
 go run . 1        # 运行类型系统反射
 go run . 6        # 运行错误处理与陷阱（重要！）
 go run . 7        # 运行反射设计模式
+
+# 学习泛型编程（已完成）
+cd 04_generics
+go run .          # 查看所有示例
+go run . 1        # 运行基础泛型示例
+go run . 6        # 运行泛型算法示例
+go run . 8        # 运行最佳实践示例
 ```
 
 ### 学习建议
@@ -865,6 +895,7 @@ go run . 7        # 运行反射设计模式
 - ✅ **并发编程**: 10个完整的示例文件，涵盖从基础到高级的所有并发概念
 - ✅ **接口与多态**: 5个完整的示例文件，涵盖接口模式、类型断言和多态设计
 - ✅ **反射**: 8个完整的示例文件，涵盖类型反射、值操作、函数/方法反射、接口反射、错误处理、设计模式和高级技巧
+- ✅ **泛型编程**: 8个完整的示例文件，涵盖基础泛型、约束系统、泛型类型、高级约束、泛型容器、泛型算法、设计模式和最佳实践
 - ✅ **详细注释**: 每个示例都有完整的代码注释和说明
 - ✅ **错误示例**: 包含常见陷阱和避免方法
 - ✅ **实际应用**: 综合案例展示实际开发中的典型场景
@@ -877,10 +908,11 @@ go run . 7        # 运行反射设计模式
 
 ## ⚠️ 注意事项
 
-- 当前项目已完成并发编程、接口与多态和反射章节，其他章节正在开发中
+- 当前项目已完成并发编程、接口与多态、反射和泛型编程章节，其他章节正在开发中
 - 建议先深入学习并发编程，这是Go语言的核心优势
 - 接口与多态是Go语言的重要特性，有助于理解Go的类型系统
 - 反射提供强大的动态编程能力，但应谨慎使用并注意错误处理
+- 泛型是Go 1.18+的新特性，提供类型安全的通用编程能力，注意性能特征和最佳实践
 - 示例中的时间延迟仅用于演示效果
 - 错误示例故意展示问题，实际开发中应避免
 
